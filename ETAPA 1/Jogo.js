@@ -8,16 +8,16 @@ class Jogo {
     }
     
     Iniciar() {
-        if(sorteio == true) {
-            console.log(`O jogo ${this.nome} irá começar`)
+        if (this.sorteio === true) {
+            console.log(`O jogo ${this.nome} irá começar`);
         }
     }
 
     Encerrar() {
-        if(ocorrendo == false) {
-            console.log(`O jogo ${this.nome} encerrou`)
+        if (this.ocorrendo === false) {
+            console.log(`O jogo ${this.nome} encerrou`);
         }
     }
 }
 
-export default Jogo
+export default Jogo;

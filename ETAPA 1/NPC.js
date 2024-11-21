@@ -1,18 +1,24 @@
-import Pessoa from "./Pessoa.js";
+import Pessoa from './Pessoa.js';  
 
 class NPC extends Pessoa {
-
-    constructor(pedido) {
-        this.pedido = pedido;
+    constructor(nome, sexo, idade, altura, jogar, pedido) {
+        super(nome, sexo, idade, altura, jogar);  
+        this.pedido = pedido;  
     }
     
     generateID() {
-        return Math_floor(Math.random() * 999) + 1;
+        return Math.floor(Math.random() * 999) + 1; 
     }
 
     #falarDicas() {
-        if(pedido == true) {
+        if (this.pedido === true) {  
             console.log(`${this.nome} tem uma dica pra falar`);
         }
     }
+
+    falarDicasPublico() {
+        this.#falarDicas(); 
+    }
 }
+
+export default NPC;

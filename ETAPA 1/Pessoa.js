@@ -1,19 +1,17 @@
-import Pessoa from "./Jogo.js";
+import Jogo from './Jogo.js';  
 
 class Pessoa {
-
-    constructor(nome, sexo, idade, altura, ganhou, morto, jogar)  {
+    constructor(nome, sexo, idade, altura, jogar)  {
         this.id = this.generateID();
         this.nome = nome;
         this.sexo = sexo;
         this.idade = idade;
         this.altura = altura;
-        this.ganhou = ganhou;
         this.jogar = jogar;
     }
 
     generateID() {
-        return Math_floor(Math.random() * 999) + 1;
+        return Math.floor(Math.random() * 999) + 1;  
     }
 
     Andar() {
@@ -21,12 +19,20 @@ class Pessoa {
     }
 
     vaiJogar() {
-        if(vaiJogar == true) {
-            console.log(`${this.nome} irá jogar`)
+        if (this.jogar === true) {
+            console.log(`${this.nome} irá jogar`);
         } else {
-            console.log(`${this.nome} não irá jogar`)
+            console.log(`${this.nome} não irá jogar`);
+        }
+    }
+
+    jogarJogo(jogo) {
+        if (this.jogar) {
+            jogo.Iniciar();  
+        } else {
+            console.log(`${this.nome} não quer jogar ${jogo.nome}`);
         }
     }
 }
 
-export default Pessoa
+export default Pessoa;

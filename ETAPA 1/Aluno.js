@@ -1,21 +1,23 @@
-import Pessoa from "./Pessoa.js";
+import Pessoa from './Pessoa.js';  
 
-class Aluno extends Pessoa{
-    constructor(funcao, morto) {
+class Aluno extends Pessoa {
+    constructor(nome, sexo, idade, altura, jogar, funcao, morto, ganhou) {
+        super(nome, sexo, idade, altura, jogar);
         this.funcao = funcao;
         this.morto = morto;
+        this.ganhou = ganhou;
     }
 
     verFuncao() {
-        console.log(`${this.nome} irá jogar como ${this.funcao}`)    
+        console.log(`${this.nome} irá jogar como ${this.funcao}`);    
     }
 
     Votar() {
-        console.log(`${this.nome} votou`)
+        console.log(`${this.nome} votou`);
     }
 
     Morrer() {
-        if(morto = true) {
+        if (this.morto === true) { 
             console.log(`${this.nome} morreu`);
         } else {
             console.log(`${this.nome} está vivo`);
@@ -23,4 +25,4 @@ class Aluno extends Pessoa{
     }
 }
 
-export default Aluno
+export default Aluno;
