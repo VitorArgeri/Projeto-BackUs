@@ -3,9 +3,9 @@ Atividade Back-End
 5 - Jogo = UML, validações e code (3 métodos até iniciarJogo)
 
 Vitor Argeri
-1. **alunos**: `Array` *FEITO*
+1. **alunos**: `Array` 
    - Lista de alunos cadastrados.  
-7. **iniciarJogo()** *FEITO*
+7. **iniciarJogo()** 
    - Converte os alunos em jogadores e escolhe aleatoriamente um grupo como sabotadores.  
 
 Pablo Delgado
@@ -21,9 +21,9 @@ Vinicius Rocha
    - Exibe informações dos jogadores (tipo, estado, grupo, etc.).  
 
 Vinicius Pereira
-4. **mostrarAlunos(grupo = null, nome = null)** *FEITO* 
+4. **mostrarAlunos(grupo = null, nome = null)** 
    - Mostra todos os alunos, agrupados e ordenados por grupo e nome.  
 
 Miguel Sarti
-5. **removerAluno(nome)**  *FEITO*
+5. **removerAluno(nome)**  
    - Remove um aluno pelo nome.    
