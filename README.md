@@ -17,7 +17,7 @@ Pablo Delgado
 Vinicius Rocha
 3. **grupos**: `Number`  
    - Quantidade total de grupos (padrão: 6).  
-6. **mostarJogadores(dados)**  
+6. **mostrarJogadores(dados)**  
    - Exibe informações dos jogadores (tipo, estado, grupo, etc.).  
 
 Vinicius Pereira
