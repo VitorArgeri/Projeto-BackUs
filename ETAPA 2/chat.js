@@ -15,4 +15,6 @@ class Chat {
     }
 }
 
+console.log('Chat foi carregado com sucesso!');
+
 export default Chat;

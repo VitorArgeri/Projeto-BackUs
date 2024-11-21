@@ -18,4 +18,5 @@ const jogadores = [
 
 const grupos = new Grupos();
 grupos.mostrarJogadores(jogadores);
+console.log(grupos.grupos);
 export default Grupos;

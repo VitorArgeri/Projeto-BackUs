@@ -18,5 +18,6 @@ function iniciarJogo(alunos) {
     return jogadores;
 }
 
+
 export { iniciarJogo };
 export { generateID };

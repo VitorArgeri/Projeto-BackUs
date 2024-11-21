@@ -27,5 +27,7 @@ chat.adicionarMensagem("Maria saiu do jogo.");
 // Mostra o histórico de mensagens no console
 chat.mostrarHistorico();
 
+console.log(chat.historico);
+
 // Exporta os jogadores, o chat e a função listarJogadores para uso em outros módulos
 export { jogadores, chat, listarJogadores };

@@ -127,3 +127,6 @@ jogo.alunos.push(new Aluno("Miguel Sarti", "MS")); // Adiciona um aluno à lista
 jogo.alunos.push(new Aluno("Vitor Argeri", "VA  ")); // Adiciona um aluno à lista de alunos
 jogo.alunos.push(new Aluno("Vinicius Pereira", "VP")); // Adiciona um aluno à lista de alunos
 
+// Exibe os alunos cadastrados
+jogo.mostrarAlunos();
+
