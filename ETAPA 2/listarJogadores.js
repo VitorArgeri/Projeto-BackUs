@@ -1,33 +1,18 @@
 import Chat from './Chat.js';
 
-// Array de objetos representando os jogadores
-const jogadores = [
-    { nome: 'João', tipo: 'dev', estado: 'Ativo', grupo: 1 },
-    { nome: 'Maria', tipo: 'sabotador', estado: 'Inativo', grupo: 2 },
-    { nome: 'Pedro', tipo: 'dev', estado: 'Ativo', grupo: 1 }
-];
+const jogadores = [ ];
 
-// Instância da classe Chat
 const chat = new Chat();
 
-// Função para listar os jogadores no console
-function listarJogadores() {
-    jogadores.forEach(jogador => {
-        console.log(`Nome: ${jogador.nome}, Tipo: ${jogador.tipo}, Estado: ${jogador.estado}, Grupo: ${jogador.grupo}`);
-    });
+for (let i = 0; i < jogadores.length; i++) {
+    const { nome, tipo, estado, grupo } = jogadores[i];
+    console.log(`Nome: ${nome}, Tipo: ${tipo}, Estado: ${estado}, Grupo: ${grupo}`);
 }
 
-// Chama a função para listar os jogadores
-listarJogadores();
-
-// Adiciona mensagens ao histórico do chat
 chat.adicionarMensagem("João entrou no jogo.");
 chat.adicionarMensagem("Maria saiu do jogo.");
 
-// Mostra o histórico de mensagens no console
 chat.mostrarHistorico();
-
 console.log(chat.historico);
 
-// Exporta os jogadores, o chat e a função listarJogadores para uso em outros módulos
-export { jogadores, chat, listarJogadores };
+export { jogadores, chat };
