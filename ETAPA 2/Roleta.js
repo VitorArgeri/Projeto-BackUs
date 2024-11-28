@@ -1,23 +1,12 @@
-function generateID() {
-    return Math.floor(Math.random() * 10000);
-}
+const generateID = () => Math.floor(Math.random() * 10000);
 
-function roletaDeFuncoes() {
-    const funcoes = ['Inocente', 'Sabotador']; 
-    return funcoes[Math.floor(Math.random() * funcoes.length)];
-}
+const roletaDeFuncoes = () => ['Inocente', 'Sabotador'][Math.floor(Math.random() * 2)];
 
-function iniciarJogo(alunos) {
-    const jogadores = alunos.map(aluno => ({
-        ...aluno,
-        id: generateID(),
-        funcao: roletaDeFuncoes(),  
-        papel: 'jogador' 
-    }));
+const iniciarJogo = (alunos) => alunos.map(aluno => ({
+  ...aluno,
+  id: generateID(),
+  funcao: roletaDeFuncoes(),
+  papel: 'jogador'
+}));
 
-    return jogadores;
-}
-
-
-export { iniciarJogo };
-export { generateID };
+export { iniciarJogo, generateID };
