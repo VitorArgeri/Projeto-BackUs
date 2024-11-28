@@ -56,11 +56,6 @@ cadastroRoutes.delete('/:nome', (req, res) => {
     })
 });
 
-cadastroRoutes.get("/iniciarJogo", (req, res) => {
-    jogadores = alunos.map(aluno => ({ nome: aluno.nome, grupo: 'jogador' }));
-    const sabotadores = jogadores[Math.floor(Math.random() * jogadores.length)];
-    sabotadores.grupo = 'sabotador';
-    res.status(200).json(jogadores);
-});
+
 
 export default cadastroRoutes;
