@@ -1,27 +1,50 @@
-Atividade BackUs
+Projeto BackUs
 
+Este projeto tem como objetivo o desenvolvimento de um sistema para o gerenciamento de um jogo, com funcionalidades como cadastro de alunos, interação entre jogadores, gerenciamento de chat e validação de regras do jogo.
+
+Tecnologias Utilizadas
+- JavaScript (ES6+)
+- Node.js
+- Express.js
+- Postman (para testes das rotas)
+- Miro/Draw.io (para criação do Diagrama UML)
+
+Diagrama de Classes (UML)
+O Diagrama de Classes UML foi elaborado conforme as funcionalidades do jogo. Ele descreve as classes envolvidas e seus respectivos métodos e atributos. Usei ferramentas como Miro e Draw.io para sua criação.
+
+Estrutura do Projeto
+|_primeiraEtapa
+|_segundaEtapa
+|_terceiraEtapa
+|_quartaEtapa
+        |_anexos
+        |_src
+        |    |_models
+        |    |_routes
+        |_server.js
+
+Responsabilidades do Grupo
 Vitor Argeri
-- Verificar classes
-- Refazer o Diagrama
-- Criação da lista de jogadores
-- Criação da lista de alunos cadastrados
+- Verificar e ajustar as classes do código. *FEITO*
+- Refazer o Diagrama UML conforme o código. *FEITO*
+- Organiar o README.md. *FEITO*
+- Criar as listas de jogadores e alunos cadastrados. *FEITO*
 
 Pablo Delgado
-- Refazer as instalações
-- Criação de iniciarJogo()
-- Fazer a estruturação básica do código (pastas, arquivos, etc.);
+- Refazer as instalações do projeto.
+- Implementar a função iniciarJogo().
+- Estruturar o código (pastas, arquivos, etc.).
 
 Vinicius Rocha
-- Testar as rotas do Postman
-- Quantidade de grupos padrão
+- Testar as rotas no Postman.
+- Definir a quantidade de grupos padrão (6).
 
-Vinicus Pereira
-- Criação do Chat
-- Mostrar todos os alunos, agrupados e ordenados pelo nome
+Vinicius Pereira
+- Criar o Chat.
+- Exibir todos os alunos, ordenados por nome e agrupados por grupo.
 
 Raphaelle
-- Deletar aluno pelo nome
+- Implementar a função de deletar aluno pelo nome.
 
 Miguel Sarti
-- Mostrar informações dos jogadores (tipo, estado, grupo, etc.).  
-
+- Exibir informações dos jogadores (tipo, estado, grupo, etc.).
