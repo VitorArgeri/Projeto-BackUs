@@ -27,7 +27,7 @@ Responsabilidades do Grupo
 Vitor Argeri
 - Verificar e ajustar as classes do código. *FEITO*
 - Refazer o Diagrama UML conforme o código. *FEITO*
-- Organiar o README.md. *FEITO*
+- Organizar o README.md. *FEITO*
 - Criar as listas de jogadores e alunos cadastrados. *FEITO*
 
 Pablo Delgado
