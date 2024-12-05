@@ -35,15 +35,15 @@ Pablo Delgado
 - Estruturar o código (pastas, arquivos, etc.).
 
 Vinicius Rocha
-- Testar as rotas no Postman.
+- Testar as rotas no Postman.'
 - Definir a quantidade de grupos padrão (6).
 
 Vinicius Pereira
 - Criar o Chat.
-- Exibir todos os alunos, ordenados por nome e agrupados por grupo.
+- Exibir todos os alunos, ordenados por nome e agrupados por grupo (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO*
 
 Raphaelle
-- Implementar a função de deletar aluno pelo nome.
+- Implementar a função de deletar aluno pelo nome (ETAPA 4>src>routes>cadastroRoutes.js).  *FEITO*
 
 Miguel Sarti
-- Exibir informações dos jogadores (tipo, estado, grupo, etc.).
+- Exibir informações dos jogadores (tipo, estado, grupo, etc.) (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO*
