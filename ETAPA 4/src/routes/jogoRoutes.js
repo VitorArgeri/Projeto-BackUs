@@ -64,6 +64,7 @@ jogoRoutes.post("/votar", (req, res) => {
     return res.status(400).json({ message: "Votante e votado são obrigatórios." });
   }
 
+  //   Timestamp é a hora em que a resposta foi enviada.
   votos.push({ votante, votado, timestamp: new Date() });
 
   return res.status(201).json({ message: `Voto registrado com sucesso. ${votante} votou em ${votado}.` });
@@ -76,7 +77,7 @@ jogoRoutes.post("/Quiz", (req, res) => {
     return res.status(400).json({ message: "Usuário e resposta são obrigatórios." });
   }
 
-//   Timestamp é a hora em que a resposta foi enviada.
+  //   Timestamp é a hora em que a resposta foi enviada.
   respostasQuiz.push({ usuario, resposta, timestamp: new Date() });
 
   return res.status(201).json({ message: "Resposta do quiz registrada com sucesso." });

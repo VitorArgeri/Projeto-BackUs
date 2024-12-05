@@ -32,14 +32,14 @@ Vitor Argeri
 
 Pablo Delgado
 - Rota Delete. *FEITO*
-- Estruturar o código (pastas, arquivos, etc.).
+- Estruturar o código (pastas, arquivos, etc.). *FEITO*
 
 Vinicius Rocha
-- Testar as rotas no Postman.'
-- Definir a quantidade de grupos padrão (6).
+- Testar as rotas no Postman.' 
+- Definir a quantidade de grupos padrão (6). 
 
 Vinicius Pereira
-- Criar o Chat.
+- Criar o Chat. *FEITO()
 - Exibir todos os alunos, ordenados por nome e agrupados por grupo (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO*
 
 Raphaelle
