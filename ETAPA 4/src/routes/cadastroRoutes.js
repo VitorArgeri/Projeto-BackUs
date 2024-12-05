@@ -98,6 +98,7 @@ cadastroRoutes.post("/adicionar", (req, res) => {
 
 
 cadastroRoutes.put("/atualizar", (req, res) => {
+
   const { nome, apelido, grupo, estaVivo, localAtual } = req.body;
 
   if (!nome || !apelido || !grupo || estaVivo === undefined || !localAtual) {
