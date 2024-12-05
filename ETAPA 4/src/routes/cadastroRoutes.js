@@ -5,6 +5,51 @@ import Sabotador from "../models/Sabotador.js";
 
 const cadastroRoutes = Router();
 
+const jogadores = [
+  {
+    Nome: "Miguel",
+    Apelido: "Sarti",
+    Grupo: "Equipe 5",
+    Status: "Vivo",
+    LocalAtual: "Sala 4"
+  },
+  {
+    Nome: "Pablo",
+    Apelido: "Pablodelgado26",
+    Grupo: "Equipe 5",
+    Status: "Morto",
+    LocalAtual: "Sala 5"
+  },
+  {
+    Nome: "Vitor",
+    Apelido: "Vitao",
+    Grupo: "Equipe 5",
+    Status: "Vivo",
+    LocalAtual: "Refeitório"
+  },
+  {
+    Nome: "Vinicius Rocha",
+    Apelido: "Rocha",
+    Grupo: "Equipe 5",
+    Status: "Morto",
+    LocalAtual: "Recepção"
+  },
+  {
+    Nome: "Vinicius Pereira",
+    Apelido: "Pereira",
+    Grupo: "Equipe 5",
+    Status: "Vivo",
+    LocalAtual: "Banheiro"
+  },
+  {
+    Nome: "Raphaelle",
+    Apelido: "Rapha",
+    Grupo: "Equipe 5",
+    Status: "Vivo",
+    LocalAtual: "Recepção"
+  },
+];
+
 cadastroRoutes.get("/listar", (req, res) => {
   const listaAlunos = alunos.map((aluno) => ({
       Nome: aluno.nome,
@@ -26,38 +71,70 @@ cadastroRoutes.get("/listar", (req, res) => {
 });
 
 cadastroRoutes.post("/adicionar", (req, res) => {
+  const { tipo, nome, apelido, grupo, estaVivo, localAtual } = req.body;
 
+  if (!tipo || !nome || !apelido || !grupo || estaVivo === undefined || !localAtual) {
+    return res.status(400).json({ message: "Todos os campos são obrigatórios." });
+  }
+
+  const novoCadastro = {
+    nome,
+    apelido,
+    grupo,
+    estaVivo,
+    localAtual,
+  };
+
+  if (tipo === "aluno") {
+    alunos.push(novoCadastro);
+  } else if (tipo === "jogador") {
+    jogadores.push(novoCadastro);
+  } else {
+    return res.status(400).json({ message: "Tipo inválido. Deve ser 'aluno' ou 'jogador'." });
+  }
+
+  return res.status(201).json({ message: "Cadastro adicionado com sucesso." });
 });
 
 
 cadastroRoutes.put("/atualizar", (req, res) => {
-  const { nome } = req.params;
-  const { apelido, grupo, estaVivo, localAtual, votos } = req.body;
-  const jogador = jogadores.find(jogador => jogador.nome === nome);
 
-  if (!jogador) {
-      return res.status(404).json({ message: "Jogador não encontrado." });
+  const { nome, apelido, grupo, estaVivo, localAtual } = req.body;
+
+  if (!nome || !apelido || !grupo || estaVivo === undefined || !localAtual) {
+    return res.status(400).json({ message: "Todos os campos são obrigatórios." });
   }
 
-  jogador.apelido = apelido;
-  jogador.grupo = grupo;
-  jogador.estaVivo = estaVivo;
-  jogador.localAtual = localAtual;
-  jogador.votos = votos;
+  const aluno = alunos.find(aluno => aluno.nome === nome);
 
-  res.status(200).json({ message: `Jogador ${nome} atualizado com sucesso.`, jogador });
+  if (!aluno) {
+    return res.status(404).json({ message: "Aluno não encontrado." });
+  }
+
+  aluno.apelido = apelido;
+  aluno.grupo = grupo;
+  aluno.estaVivo = estaVivo;
+  aluno.localAtual = localAtual;
+
+  return res.status(200).json({ message: "Aluno atualizado com sucesso." });
 });
 
 cadastroRoutes.delete("/remover", (req, res) => {
-  const { nome } = req.params;
-  const index = jogadores.findIndex(jogador => jogador.nome === nome);
-
-  if (index === -1) {
-      return res.status(404).json({ message: "Jogador não encontrado." });
-  }
-
-  jogadores.splice(index, 1);
-  res.status(200).json({ message: `Jogador ${nome} deletado com sucesso.` });
-});
+  const { nome } = req.body;
+    
+  const aluno = alunos.find((aluno) => aluno.nome === nome);
+      if (!aluno) {
+        return res
+          .status(404)
+          .json({ message: `Aluno com nome ${nome} não encontrado!` });
+      }
+  
+      alunos = alunos.filter((aluno) => aluno.nome !== nome);
+    
+      return res.status(200).json({
+        message: "Aluno removido com sucesso!",
+        aluno,
+      });
+    });
 
 export default cadastroRoutes;

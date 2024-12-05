@@ -25,25 +25,25 @@ Estrutura do Projeto
 
 Responsabilidades do Grupo
 Vitor Argeri
-- Verificar e ajustar as classes do código. *FEITO*
-- Refazer o Diagrama UML conforme o código. *FEITO*
-- Organizar o README.md. *FEITO*
-- Criar as listas de jogadores e alunos cadastrados. *FEITO*
+- Verificar e ajustar as classes do código (ETAPA 4>src>models). *FEITO* 
+- Refazer o Diagrama UML conforme o código (ETAPA 4>anexo>anexos). *FEITO* 
+- Organizar o README.md (README.md). *FEITO* 
+- Criar as listas de jogadores e alunos cadastrados (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO* 
 
 Pablo Delgado
 - Rota Delete. *FEITO*
 - Estruturar o código (pastas, arquivos, etc.).
 
 Vinicius Rocha
-- Testar as rotas no Postman.
+- Testar as rotas no Postman.'
 - Definir a quantidade de grupos padrão (6).
 
 Vinicius Pereira
 - Criar o Chat.
-- Exibir todos os alunos, ordenados por nome e agrupados por grupo.
+- Exibir todos os alunos, ordenados por nome e agrupados por grupo (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO*
 
 Raphaelle
-- Implementar a função de deletar aluno pelo nome.
+- Implementar a função de deletar aluno pelo nome (ETAPA 4>src>routes>cadastroRoutes.js).  *FEITO*
 
 Miguel Sarti
-- Exibir informações dos jogadores (tipo, estado, grupo, etc.).
+- Exibir informações dos jogadores (tipo, estado, grupo, etc.) (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO*
