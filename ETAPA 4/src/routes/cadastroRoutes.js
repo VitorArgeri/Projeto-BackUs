@@ -98,7 +98,24 @@ cadastroRoutes.post("/adicionar", (req, res) => {
 
 
 cadastroRoutes.put("/atualizar", (req, res) => {
+  const { nome, apelido, grupo, estaVivo, localAtual } = req.body;
 
+  if (!nome || !apelido || !grupo || estaVivo === undefined || !localAtual) {
+    return res.status(400).json({ message: "Todos os campos são obrigatórios." });
+  }
+
+  const aluno = alunos.find(aluno => aluno.nome === nome);
+
+  if (!aluno) {
+    return res.status(404).json({ message: "Aluno não encontrado." });
+  }
+
+  aluno.apelido = apelido;
+  aluno.grupo = grupo;
+  aluno.estaVivo = estaVivo;
+  aluno.localAtual = localAtual;
+
+  return res.status(200).json({ message: "Aluno atualizado com sucesso." });
 });
 
 cadastroRoutes.delete("/remover", (req, res) => {
