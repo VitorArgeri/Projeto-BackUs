@@ -25,10 +25,10 @@ Estrutura do Projeto
 
 Responsabilidades do Grupo
 Vitor Argeri
-- Verificar e ajustar as classes do código. *FEITO* (ETAPA 4>src>models)
-- Refazer o Diagrama UML conforme o código. *FEITO* (ETAPA 4>anexo>anexos)
-- Organizar o README.md. *FEITO* (README.md)
-- Criar as listas de jogadores e alunos cadastrados. *FEITO* (ETAPA 4>src>routes>cadastroRoutes.js)
+- Verificar e ajustar as classes do código (ETAPA 4>src>models). *FEITO* 
+- Refazer o Diagrama UML conforme o código (ETAPA 4>anexo>anexos). *FEITO* 
+- Organizar o README.md (README.md). *FEITO* 
+- Criar as listas de jogadores e alunos cadastrados (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO* 
 
 Pablo Delgado
 - Rota Delete. *FEITO*
