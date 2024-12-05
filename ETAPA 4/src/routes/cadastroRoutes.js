@@ -57,15 +57,21 @@ cadastroRoutes.put("/atualizar", (req, res) => {
 });
 
 cadastroRoutes.delete("/remover", (req, res) => {
-  const { nome } = req.params;
-  const index = jogadores.findIndex(jogador => jogador.nome === nome);
-
-  if (index === -1) {
-      return res.status(404).json({ message: "Jogador não encontrado." });
-  }
-
-  jogadores.splice(index, 1);
-  res.status(200).json({ message: `Jogador ${nome} deletado com sucesso.` });
-});
+  const { nome } = req.body;
+    
+  const aluno = alunos.find((aluno) => aluno.nome === nome);
+      if (!aluno) {
+        return res
+          .status(404)
+          .json({ message: `Aluno com nome ${nome} não encontrado!` });
+      }
+  
+      alunos = alunos.filter((aluno) => aluno.nome !== nome);
+    
+      return res.status(200).json({
+        message: "Aluno removido com sucesso!",
+        aluno,
+      });
+    });
 
 export default cadastroRoutes;
