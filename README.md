@@ -31,8 +31,7 @@ Vitor Argeri
 - Criar as listas de jogadores e alunos cadastrados. *FEITO*
 
 Pablo Delgado
-- Refazer as instalações do projeto.
-- Implementar a função iniciarJogo().
+- Rota Delete. *FEITO*
 - Estruturar o código (pastas, arquivos, etc.).
 
 Vinicius Rocha
