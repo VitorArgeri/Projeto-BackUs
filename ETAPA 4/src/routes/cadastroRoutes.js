@@ -31,7 +31,21 @@ cadastroRoutes.post("/adicionar", (req, res) => {
 
 
 cadastroRoutes.put("/atualizar", (req, res) => {
+  const { nome } = req.params;
+  const { apelido, grupo, estaVivo, localAtual, votos } = req.body;
+  const jogador = jogadores.find(jogador => jogador.nome === nome);
 
+  if (!jogador) {
+      return res.status(404).json({ message: "Jogador não encontrado." });
+  }
+
+  jogador.apelido = apelido;
+  jogador.grupo = grupo;
+  jogador.estaVivo = estaVivo;
+  jogador.localAtual = localAtual;
+  jogador.votos = votos;
+
+  res.status(200).json({ message: `Jogador ${nome} atualizado com sucesso.`, jogador });
 });
 
 cadastroRoutes.delete("/remover", (req, res) => {
