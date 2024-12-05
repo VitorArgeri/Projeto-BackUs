@@ -31,7 +31,8 @@ Vitor Argeri
 - Criar as listas de jogadores e alunos cadastrados (ETAPA 4>src>routes>cadastroRoutes.js). *FEITO* 
 
 Pablo Delgado
-- Rota Delete. *FEITO*
+- No arquivo cadastroRoutes eu fiz a Rota Delete e atualizar jogadores. *FEITO*
+- No arquivo jogoRoutes eu fiz as rotas mover e mostrar papel. *FEITO*
 - Estruturar o código (pastas, arquivos, etc.). *FEITO*
 
 Vinicius Rocha
