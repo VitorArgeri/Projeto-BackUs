@@ -1,4 +1,6 @@
 import { Router } from "express";
+import cadastroRoutes from "./cadastroRoutes.js";
+import jogoRoutes from "./jogoRoutes.js";
 
 const rotas = Router();
 
