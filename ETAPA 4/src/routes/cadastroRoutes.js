@@ -5,51 +5,6 @@ import Sabotador from "../models/Sabotador.js";
 
 const cadastroRoutes = Router();
 
-const jogadores = [
-  {
-    Nome: "Miguel",
-    Apelido: "Sarti",
-    Grupo: "Equipe 5",
-    Status: "Vivo",
-    LocalAtual: "Sala 4"
-  },
-  {
-    Nome: "Pablo",
-    Apelido: "Pablodelgado26",
-    Grupo: "Equipe 5",
-    Status: "Morto",
-    LocalAtual: "Sala 5"
-  },
-  {
-    Nome: "Vitor",
-    Apelido: "Vitao",
-    Grupo: "Equipe 5",
-    Status: "Vivo",
-    LocalAtual: "Refeitório"
-  },
-  {
-    Nome: "Vinicius Rocha",
-    Apelido: "Rocha",
-    Grupo: "Equipe 5",
-    Status: "Morto",
-    LocalAtual: "Recepção"
-  },
-  {
-    Nome: "Vinicius Pereira",
-    Apelido: "Pereira",
-    Grupo: "Equipe 5",
-    Status: "Vivo",
-    LocalAtual: "Banheiro"
-  },
-  {
-    Nome: "Raphaelle",
-    Apelido: "Rapha",
-    Grupo: "Equipe 5",
-    Status: "Vivo",
-    LocalAtual: "Recepção"
-  },
-];
-
 cadastroRoutes.get("/listar", (req, res) => {
   const listaAlunos = alunos.map((aluno) => ({
       Nome: aluno.nome,
