@@ -9,8 +9,7 @@ rotas.get("/", (req, res) => {
 });
 
 
-rotas.use((req, res) => {
-  res.status(404).json({ message: "Rota não encontrada." });
-});
+rotas.use("/cadastro", cadastroRoutes);
+rotas.use("/jogo", jogoRoutes);
 
 export default rotas;
